@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="樂齡生活,退休規劃,銀髮族,健康管理,課程報名">
+    <meta name="description" content="整合式樂齡生活平台，提供退休規劃、健康管理、課程報名等全方位服務">
+    <title>樂齡生活整合平台 - 重啟精彩人生</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-heartbeat me-2" style="color: var(--icon-color);"></i>
+                <span class="fw-bold">樂齡生活</span>
+                <small class="d-block text-muted">Happy Elder Life</small>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">關於我們</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">樂齡課程</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planning">退休規劃</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#activities">體驗活動</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#growth">成長計畫</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">聯絡我們</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-nav ms-3">
+                                            <button class="btn btn-outline-warning btn-sm me-2" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                                            <button class="btn btn-warning btn-sm me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="fas fa-user me-1"></i>登入
+                        </button>
+                    <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="fas fa-shopping-cart me-1"></i>購物車
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-slider">
+                <div class="hero-slide active" style="background-image: url('images/c1.png')">
+                    <div class="hero-content">
+                        <h1 class="hero-title" data-aos="fade-up">
+                            <span class="text-primary">樂齡生活</span> 重啟精彩人生
+                        </h1>
+                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                            退休不是結束，而是全新開始的起點
+                        </p>
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                            <a href="#courses" class="btn btn-warning btn-lg me-3">
+                                <i class="fas fa-graduation-cap me-2"></i>探索課程
+                            </a>
+                            <a href="#planning" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-chart-line me-2"></i>退休規劃
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Action Buttons -->
+        <div class="floating-actions">
+            <button class="fab-btn" data-bs-toggle="modal" data-bs-target="#aiChatModal" title="AI智能助手">
+                <i class="fas fa-robot"></i>
+            </button>
+            <button class="fab-btn" data-bs-toggle="modal" data-bs-target="#gameModal" title="限時活動">
+                <i class="fas fa-gift"></i>
+            </button>
+            <button class="fab-btn" onclick="scrollToTop()" title="回到頂部">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title">
+                        <i class="fas fa-info-circle text-primary me-2"></i>
+                        關於我們
+                    </h2>
+                    <p class="lead">
+                        隨著高齡化社會的到來，樂齡族群對於退休生活的期待逐漸從「基本需求」轉向「品質提升」。
+                    </p>
+                    <p>
+                        我們計劃打造一個「退休規劃功能網站」，提供全方位的支援與資源，讓每位銀髮族都能擁有健康、充實且有意义的退休生活。
+                    </p>
+                    
+                    <div class="features-grid mt-4">
+                        <div class="feature-item">
+                            <i class="fas fa-heartbeat text-danger"></i>
+                            <h5>健康管理</h5>
+                            <p>定期健康檢查與日常規劃</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-graduation-cap text-primary"></i>
+                            <h5>終身學習</h5>
+                            <p>從烹飪到數位科技的多元課程</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-users text-success"></i>
+                            <h5>社交互動</h5>
+                            <p>參與社區活動與志願服務</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-image">
+                        <img src="images/SeniorCitizens10.jpg" alt="樂齡生活" class="img-fluid rounded-3 shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap text-primary me-2"></i>
+                    樂齡課程
+                </h2>
+                <p class="lead">優質活動，精心設計，讓您在快樂中也能輕鬆學習！</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/b1.png" alt="樂齡動手做" class="img-fluid">
+                            <div class="course-badge">免費課程</div>
+                        </div>
+                        <div class="course-content">
+                            <h5 class="course-title">做出你的夢想—樂齡動手做</h5>
+                            <p class="course-description">
+                                透過手作活動，激發創意潛能，讓您的退休生活更加豐富多彩。
+                            </p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock me-1"></i>每日 9:00-12:00</span>
+                                <span><i class="fas fa-calendar me-1"></i>2025/01/29-31</span>
+                                <span><i class="fas fa-map-marker-alt me-1"></i>基隆市發財區成功路999號</span>
+                            </div>
+                            <button class="btn btn-warning w-100 mt-3" onclick="enrollCourse('樂齡動手做')">
+                                <i class="fas fa-check me-2"></i>我要報名
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/b4.png" alt="妙齡廚房交流會" class="img-fluid">
+                            <div class="course-badge">免費課程</div>
+                        </div>
+                        <div class="course-content">
+                            <h5 class="course-title">香味四溢—妙齡廚房交流會</h5>
+                            <p class="course-description">
+                                學習健康烹飪技巧，與同好分享美食心得，享受烹飪的樂趣。
+                            </p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock me-1"></i>15:00-18:00</span>
+                                <span><i class="fas fa-calendar me-1"></i>2025/02/21</span>
+                                <span><i class="fas fa-map-marker-alt me-1"></i>基隆市發財區成功路999號</span>
+                            </div>
+                            <button class="btn btn-warning w-100 mt-3" onclick="enrollCourse('妙齡廚房交流會')">
+                                <i class="fas fa-check me-2"></i>我要報名
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/b7.png" alt="愛上自然" class="img-fluid">
+                            <div class="course-badge">免費課程</div>
+                        </div>
+                        <div class="course-content">
+                            <h5 class="course-title">探索心靈奧妙—愛上自然</h5>
+                            <p class="course-description">
+                                透過自然探索活動，重新認識大自然，找到內心的平靜與喜悅。
+                            </p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock me-1"></i>每日 9:00-12:00</span>
+                                <span><i class="fas fa-calendar me-1"></i>2025/03/07</span>
+                                <span><i class="fas fa-map-marker-alt me-1"></i>基隆市發財區成功路999號</span>
+                            </div>
+                            <button class="btn btn-warning w-100 mt-3" onclick="enrollCourse('愛上自然')">
+                                <i class="fas fa-check me-2"></i>我要報名
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planning Section -->
+    <section id="planning" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">
+                    <i class="fas fa-chart-line text-primary me-2"></i>
+                    退休規劃
+                </h2>
+                <p class="lead">科學化的退休規劃，讓您的未來更有保障</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="planning-card text-center">
+                        <div class="planning-icon">
+                            <i class="fas fa-calculator fa-3x text-primary"></i>
+                        </div>
+                        <h4>預估每月支出</h4>
+                        <p>列出退休後的基本支出，包括飲食、房租、水電費，以及娛樂或旅行等額外支出。</p>
+                                                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#planningModal">
+                                開始規劃
+                            </button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="planning-card text-center">
+                        <div class="planning-icon">
+                            <i class="fas fa-calendar-alt fa-3x text-success"></i>
+                        </div>
+                        <h4>計算退休年數</h4>
+                        <p>假設退休年齡為65歲，壽命預計85歲，那麼需要至少20年的生活資金。</p>
+                                                    <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#planningModal">
+                                開始規劃
+                            </button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="planning-card text-center">
+                        <div class="planning-icon">
+                            <i class="fas fa-piggy-bank fa-3x text-warning"></i>
+                        </div>
+                        <h4>檢視現有資源</h4>
+                        <p>包括勞保退休金、定存、股票或其他投資，總結現有財務狀況，計算資金缺口。</p>
+                        <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#planningModal">
+                            開始規劃
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">
+                    <i class="fas fa-hiking text-primary me-2"></i>
+                    體驗活動
+                </h2>
+                <p class="lead">豐富多彩的戶外活動，讓您的退休生活更加精彩</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="activity-card">
+                        <img src="images/SeniorCitizens23.jpg" alt="青銀淨灘活動" class="img-fluid">
+                        <div class="activity-content">
+                            <h5>青銀淨灘活動</h5>
+                            <p>想要為大自然盡一份心力嗎？快來參加青銀淨灘活動！</p>
+                            <div class="activity-meta">
+                                <span><i class="fas fa-users me-1"></i>189已參加</span>
+                                <span><i class="fas fa-star me-1"></i>4.8</span>
+                                <span><i class="fas fa-clock me-1"></i>3小時</span>
+                            </div>
+                            <div class="activity-price">免費報名</div>
+                            <button class="btn btn-success w-100" onclick="enrollActivity('青銀淨灘活動')">
+                                我要報名
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="activity-card">
+                        <img src="images/SeniorCitizens02.jpg" alt="憶起做拉麵" class="img-fluid">
+                        <div class="activity-content">
+                            <h5>憶起做拉麵</h5>
+                            <p>與孩子們一起做拉麵，增進親子關係，名額有限！</p>
+                            <div class="activity-meta">
+                                <span><i class="fas fa-users me-1"></i>27已參加</span>
+                                <span><i class="fas fa-star me-1"></i>5.0</span>
+                                <span><i class="fas fa-clock me-1"></i>5小時</span>
+                            </div>
+                            <div class="activity-price">NT$300</div>
+                            <button class="btn btn-success w-100" onclick="enrollActivity('憶起做拉麵')">
+                                我要報名
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="activity-card">
+                        <img src="images/SeniorCitizens09.jpg" alt="油漆共遊教學" class="img-fluid">
+                        <div class="activity-content">
+                            <h5>油漆共遊教學</h5>
+                            <p>專業油漆工人教學，讓您在家換油漆簡單又安全！</p>
+                            <div class="activity-meta">
+                                <span><i class="fas fa-users me-1"></i>62已參加</span>
+                                <span><i class="fas fa-star me-1"></i>4.9</span>
+                                <span><i class="fas fa-clock me-1"></i>2小時</span>
+                            </div>
+                            <div class="activity-price">NT$100</div>
+                            <button class="btn btn-success w-100" onclick="enrollActivity('油漆共遊教學')">
+                                我要報名
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="activity-card">
+                        <img src="images/SeniorCitizens17.jpg" alt="基礎醫療觀念" class="img-fluid">
+                        <div class="activity-content">
+                            <h5>學會基礎醫療觀念</h5>
+                            <p>學習自我診療技巧，以最安全的方式進行健康檢測。</p>
+                            <div class="activity-meta">
+                                <span><i class="fas fa-users me-1"></i>59已參加</span>
+                                <span><i class="fas fa-star me-1"></i>4.7</span>
+                                <span><i class="fas fa-clock me-1"></i>3小時</span>
+                            </div>
+                            <div class="activity-price">NT$600</div>
+                            <button class="btn btn-success w-100" onclick="enrollActivity('學會基礎醫療觀念')">
+                                我要報名
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Growth Section -->
+    <section id="growth" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title">
+                        <i class="fas fa-seedling text-primary me-2"></i>
+                        建設成長計畫
+                    </h2>
+                    <p class="lead">
+                        我們幫您總結與未來計劃，回顧全年成長，記錄完成的目標，設定下一年的新挑戰與願望。
+                    </p>
+                    <p>
+                        幫助老人家們可以活得更快樂又更加安穩，不會因為外在因素而去變更自己的目標。
+                    </p>
+                    
+                    <div class="growth-timeline mt-4">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">Q1</div>
+                            <div class="timeline-content">
+                                <h6>第一季度</h6>
+                                <p>健康目標設定、學習新技能、情感維繫</p>
+                                <img src="images/SeniorCitizens01.jpg" alt="第一季度" class="img-fluid mt-2 rounded" style="max-width: 150px;">
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">Q2</div>
+                            <div class="timeline-content">
+                                <h6>第二季度</h6>
+                                <p>心理韌性提升、身體活力挑戰、理財規劃</p>
+                                <img src="images/SeniorCitizens24.jpg" alt="第二季度" class="img-fluid mt-2 rounded" style="max-width: 150px;">
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">Q3</div>
+                            <div class="timeline-content">
+                                <h6>第三季度</h6>
+                                <p>自我成就紀錄、生活環境優化、社區貢獻</p>
+                                <img src="images/SeniorCitizens26.jpg" alt="第三季度" class="img-fluid mt-2 rounded" style="max-width: 150px;">
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">Q4</div>
+                            <div class="timeline-content">
+                                <h6>第四季度</h6>
+                                <p>藝術創意表達、探索未知、年度回顧展望</p>
+                                <img src="images/SeniorCitizens27.jpg" alt="第四季度" class="img-fluid mt-2 rounded" style="max-width: 150px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="growth-stats">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="stat-card text-center">
+                                    <div class="stat-number">10%</div>
+                                    <div class="stat-label">佔人口比例</div>
+                                    <p class="stat-desc">行政院統計銀髮族占人口比率</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-card text-center">
+                                    <div class="stat-number">796+</div>
+                                    <div class="stat-label">網站點擊數</div>
+                                    <p class="stat-desc">此網站已被開啟796次</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-card text-center">
+                                    <div class="stat-number">12</div>
+                                    <div class="stat-label">成長計畫</div>
+                                    <p class="stat-desc">給您十二個月的目標</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-card text-center">
+                                    <div class="stat-number">50+</div>
+                                    <div class="stat-label">活動舉辦數</div>
+                                    <p class="stat-desc">我們的活動已舉辦超過五十次</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">
+                    <i class="fas fa-paperclip text-primary me-2"></i>
+                    聯絡我們
+                </h2>
+                <p class="lead">歡迎您與我們聯繫，讓我們為您提供更多樂活銀髮方式</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-info">
+                        <h4>聯絡資訊</h4>
+                        <div class="contact-item">
+                            <i class="fas fa-phone text-primary me-3"></i>
+                            <div>
+                                <strong>專線電話</strong><br>
+                                <span>0800-123-123</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock text-primary me-3"></i>
+                            <div>
+                                <strong>服務時間</strong><br>
+                                <span>7:00~18:00</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                            <div>
+                                <strong>地址</strong><br>
+                                <span>基隆市發財區成功路999號</span>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links mt-4">
+                            <h5>關注我們</h5>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-line"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="contact-form">
+                            <h4>訪客留言</h4>
+                            <p>如果有任何樂齡活動上的問題以及建議，歡迎在下方留言讓我們知道。</p>
+                            
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="請輸入您的暱稱" required>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" placeholder="請輸入您的留言" required></textarea>
+                                </div>
+                                                            <button type="submit" class="btn btn-warning w-100">
+                                <i class="fas fa-paper-plane me-2"></i>送出留言
+                            </button>
+                            </form>
+                            
+                            <div class="message-board mt-4">
+                                <h5>最新留言</h5>
+                                <div class="message-item">
+                                    <div class="message-header">
+                                        <img src="images/icon1.png" alt="用戶頭像" class="rounded-circle me-2" style="width: 30px; height: 30px;">
+                                        <strong>王大明</strong>
+                                        <small class="text-muted ms-2">2024/12/03</small>
+                                    </div>
+                                    <div class="message-body">
+                                        大家好，我是近期退休的一名工程師，我認為這個網站對於活動的安排非常縝密，讓其他高齡人士擁有充實的生活。
+                                    </div>
+                                </div>
+                                <div class="message-item">
+                                    <div class="message-header">
+                                        <img src="images/icon2.png" alt="用戶頭像" class="rounded-circle me-2" style="width: 30px; height: 30px;">
+                                        <strong>小林哥</strong>
+                                        <small class="text-muted ms-2">2024/12/02</small>
+                                    </div>
+                                    <div class="message-body">
+                                        我是一名高齡人士，透過這個網站的樂齡新知，我成功了解到如何好好度過我的退休生活日子。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="footer-brand">
+                        <i class="fas fa-heartbeat text-warning me-2"></i>
+                        <span class="fw-bold">樂齡生活</span>
+                        <small class="d-block text-muted">Happy Elder Life</small>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <p class="mb-0">&copy; 2024 樂齡生活整合平台. All rights reserved.</p>
+                    <p class="mb-0">打造樂齡生活，享樂人間.....</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">會員登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label">電子郵件</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">密碼</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">記得我</label>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">登入</button>
+                    </form>
+                    <hr>
+                    <p class="text-center mb-0">
+                        還沒有帳號？ 
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">立即註冊</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Chat Modal -->
+    <div class="modal fade" id="aiChatModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-robot text-primary me-2"></i>
+                        AI智能助手
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="chat-container">
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="message bot-message">
+                                <div class="message-content">
+                                    您好！我是您的AI智能助手，有什麼我可以幫助您的嗎？
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" class="form-control" placeholder="請輸入您的問題..." id="chatInput">
+                            <button class="btn btn-primary" onclick="sendMessage()">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Modal -->
+    <div class="modal fade" id="gameModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-gift text-warning me-2"></i>
+                        限時活動 - 刮刮樂
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>按下滑鼠左鍵並且拖曳即可開始刮刮樂</p>
+                    <canvas id="scratchCard" width="300" height="200"></canvas>
+                    <div id="gameResult" class="mt-3 d-none">
+                        <h5 class="text-success">恭喜獲得樂齡海灘渡假村門票*1</h5>
+                        <button class="btn btn-primary" onclick="claimPrize()">領取獎品</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-shopping-cart text-success me-2"></i>
+                        購物車
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems">
+                        <p class="text-center text-muted">購物車是空的</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="me-auto">總計: NT$<span id="cartTotal">0</span></span>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                    <button class="btn btn-primary" onclick="checkout()">結帳</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Planning Modal -->
+    <div class="modal fade" id="planningModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">退休規劃計算器</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="planningForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">目前年齡</label>
+                                    <input type="number" class="form-control" id="currentAge" min="40" max="70" value="50">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">預計退休年齡</label>
+                                    <input type="number" class="form-control" id="retirementAge" min="55" max="75" value="65">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">預期壽命</label>
+                                    <input type="number" class="form-control" id="lifeExpectancy" min="75" max="95" value="85">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">每月生活費</label>
+                                    <input type="number" class="form-control" id="monthlyExpense" min="10000" max="100000" value="30000">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">現有存款</label>
+                                    <input type="number" class="form-control" id="currentSavings" min="0" max="10000000" value="1000000">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">每月儲蓄</label>
+                                    <input type="number" class="form-control" id="monthlySavings" min="0" max="100000" value="15000">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">計算退休規劃</button>
+                    </form>
+                    
+                    <div id="planningResult" class="mt-4 d-none">
+                        <h6>規劃結果</h6>
+                        <div class="result-item">
+                            <strong>退休年數:</strong> <span id="retirementYears">-</span> 年
+                        </div>
+                        <div class="result-item">
+                            <strong>總需求金額:</strong> NT$<span id="totalNeeded">-</span>
+                        </div>
+                        <div class="result-item">
+                            <strong>資金缺口:</strong> NT$<span id="fundingGap">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
