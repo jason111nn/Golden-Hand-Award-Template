@@ -250,7 +250,9 @@ body {
 .fw-bold{
     color: var(--primary-color);
 }
-
+.mb-0{
+    color: var(--gray-800);
+}
 .lead {
     font-size: 1.25rem;
     color: var(--gray-600);
