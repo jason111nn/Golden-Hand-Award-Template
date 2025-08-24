@@ -53,11 +53,11 @@ function updateThemeIcon(theme) {
     const icon = themeToggle.querySelector('i');
     
     if (theme === 'dark') {
-        icon.className = 'fas fa-sun';
-        themeToggle.title = '切換淺色主題';
+        icon.className = 'fas fa-snowflake';
+        themeToggle.title = '切換暖色主題';
     } else {
-        icon.className = 'fas fa-moon';
-        themeToggle.title = '切換深色主題';
+        icon.className = 'fas fa-sun';
+        themeToggle.title = '切換冷色主題';
     }
 }
 
