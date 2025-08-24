@@ -21,7 +21,7 @@
     
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --icon-color: #DAA520;  /* 統一圖標顏色 - 金黃色 */
-    --icon-hover-color: #ceffc8;  /* 圖標懸停顏色 - 森林綠 */
+    --icon-hover-color: #fffd9f;  /* 圖標懸停顏色 - 森林綠 */
     --icon-background-color: #ffe0b7;
     --transition: all 0.3s ease;
     --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -33,6 +33,7 @@
     --warning-color: rgb(43, 43, 80);
     --success-color: rgb(97, 113, 156);
     --icon-color: #696ab4;
+    --icon-hover-color: #c0c3e9;
     --gray-100: #87879F;
     --gray-200: #77778F;
     --gray-300: #67677F;
